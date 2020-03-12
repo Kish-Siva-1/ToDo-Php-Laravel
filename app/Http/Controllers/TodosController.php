@@ -79,7 +79,7 @@ class TodosController extends Controller
         return redirect('/todos');
     }
 
-    public function updatecompleted(Todo $todo)
+    public function complete(Todo $todo)
     {
 
         $todo -> completed = true;
