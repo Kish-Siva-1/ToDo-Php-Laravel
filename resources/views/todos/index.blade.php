@@ -26,6 +26,13 @@
 
                                 <a href="/todos/{{$todo->id}}" class="btn btn-primary btm-sm float-right">View</a>
 
+                                @if( $todo -> completed == false )
+                                    <form method="POST" action="/todos/{{$todo->id}}/updatecompleted" >
+                                        @csrf
+                                        <button class="btn btn-primary btm-sm">Complete Todo</button>
+                                    </form>
+                                @endif
+
                             </li>
                         @endforeach
                     </ul>
